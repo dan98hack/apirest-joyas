@@ -1,0 +1,99 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "API Joyas",
+  "dateExported": "2023-11-15T12:00:00.000Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "1",
+      "colId": "1",
+      "containerId": "",
+      "name": "Obtener todas las joyas",
+      "url": "http://localhost:3000/joyas",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2023-11-15T12:00:00.000Z",
+      "modified": "2023-11-15T12:00:00.000Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "2",
+      "colId": "1",
+      "containerId": "",
+      "name": "Agregar nueva joya",
+      "url": "http://localhost:3000/joyas",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2023-11-15T12:00:00.000Z",
+      "modified": "2023-11-15T12:00:00.000Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"nombre\": \"Anillo de Oro\",\n  \"descripcion\": \"Anillo de oro de 18 quilates con diamante\",\n  \"precio\": 1200,\n  \"peso\": 5.5,\n  \"stock\": 10\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "3",
+      "colId": "1",
+      "containerId": "",
+      "name": "Buscar joya por nombre",
+      "url": "http://localhost:3000/joyas/nombre/Anillo de Oro",
+      "method": "GET",
+      "sortNum": 30000,
+      "created": "2023-11-15T12:00:00.000Z",
+      "modified": "2023-11-15T12:00:00.000Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "4",
+      "colId": "1",
+      "containerId": "",
+      "name": "Actualizar joya por nombre",
+      "url": "http://localhost:3000/joyas/nombre/Anillo de Oro",
+      "method": "PUT",
+      "sortNum": 40000,
+      "created": "2023-11-15T12:00:00.000Z",
+      "modified": "2023-11-15T12:00:00.000Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"datosActualizados\": {\n    \"precio\": 1500,\n    \"stock\": 15\n  }\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "5",
+      "colId": "1",
+      "containerId": "",
+      "name": "Eliminar joya por nombre",
+      "url": "http://localhost:3000/joyas/nombre/Anillo de Oro",
+      "method": "DELETE",
+      "sortNum": 50000,
+      "created": "2023-11-15T12:00:00.000Z",
+      "modified": "2023-11-15T12:00:00.000Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    }
+  ]
+}

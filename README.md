@@ -24,7 +24,7 @@ Este proyecto implementa una API REST que permite realizar operaciones CRUD sobr
 
 1. Clonar el repositorio:
    ```
-   git clone https://github.com/tu-usuario/apirest-joyas.git
+   git clone https://github.com/dan98hack/apirest-joyas.git
    cd apirest-joyas
    ```
 
@@ -41,6 +41,10 @@ Este proyecto implementa una API REST que permite realizar operaciones CRUD sobr
    ```
    npm run dev
    ```
+
+## Pruebas con Thunder Client
+
+Se ha incluido una colección de Thunder Client para facilitar las pruebas de la API. Para más detalles sobre cómo utilizar Thunder Client con esta API, consulta el archivo [THUNDER_CLIENT.md](THUNDER_CLIENT.md).
 
 ## Endpoints
 
