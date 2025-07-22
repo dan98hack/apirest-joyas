@@ -27,7 +27,7 @@ function agregarJoya(req, res) {
 }
 
 function buscarJoya(req, res, next) {
-    if (!req.body)req.body={V}
+    if (!req.body) req.body = {}
     var consulta = {}
     consulta[req.params.key]=req.params.value
     joyasModel.find(consulta)
@@ -49,7 +49,7 @@ function mostrarJoya(req, res) {
     return res.status(200).send({joyas})
 }
 
-function eliminarJoya(res,req){
+function eliminarJoya(req, res){
     var joyas = {}
     joyas = req.body.joyas
     joyasModel.deleteOne(joyas[0])
