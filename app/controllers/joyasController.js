@@ -63,6 +63,27 @@ function eliminarJoya(res,req){
     
 }
 
+function actualizarJoya(req, res) {
+    if (req.body.e) return res.status(404).send({message: 'Error al consultar la información'})
+    if (!req.body.joyas || !req.body.joyas.length) return res.status(204).send({message: 'No hay joya para actualizar'})
+    
+    const joyaId = req.body.joyas[0]._id
+    const datosActualizados = req.body.datosActualizados
+    
+    joyasModel.findByIdAndUpdate(joyaId, datosActualizados, {new: true})
+        .then(joyaActualizada => {
+            if (!joyaActualizada) {
+                return res.status(404).send({message: 'No se encontró la joya para actualizar'})
+            }
+            return res.status(200).send({
+                message: 'Joya actualizada correctamente',
+                joya: joyaActualizada
+            })
+        })
+        .catch(e => {
+            return res.status(500).send({message: 'Error al actualizar la joya', error: e.message})
+        })
+}
 
 
 module.exports = {
@@ -70,5 +91,6 @@ module.exports = {
     agregarJoya,
     buscarJoya,
     mostrarJoya,
-    eliminarJoya
+    eliminarJoya,
+    actualizarJoya
 }

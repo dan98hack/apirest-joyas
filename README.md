@@ -47,6 +47,7 @@ Este proyecto implementa una API REST que permite realizar operaciones CRUD sobr
 - `GET /joyas`: Obtiene todas las joyas
 - `POST /joyas`: Agrega una nueva joya
 - `GET /joyas/:key/:value`: Busca una joya por un criterio específico
+- `PUT /joyas/:key/:value`: Actualiza una joya por un criterio específico
 - `DELETE /joyas/:key/:value`: Elimina una joya por un criterio específico
 
 ## Autor
